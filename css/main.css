@@ -1,0 +1,290 @@
+/* * {
+    outline: 1px solid tomato;
+} */
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    z-index: 999;
+    padding: 13px 0;
+    background: #fff;
+    top: 0;
+}
+
+.header .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img {
+    width: 90px;
+    cursor: pointer;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 50px;
+}
+
+.header .bar1 {
+    font-size: 16px;
+}
+
+.header .search input[type="text"] {
+    width: 160px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #666;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Noto Sans KR';
+
+    transition: width 0.5s;
+}
+
+.header .search input[type="text"]:focus {
+    width: 170px;
+}
+
+.header .search input[type="text"]::placeholder {
+    color: #b4af7e;
+}
+
+.header .search input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.header .search button {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 25px;
+    padding: 0 0 0 10px;
+    vertical-align: middle;
+}
+
+
+
+
+
+/* <메인배너 : 슬라이드> */
+.main_visual {
+    position: relative;
+}
+
+.main_visual .itm {
+    position: relative;
+    height: 600px;
+}
+
+.main_visual .bg01 {
+    background: url(../images/main01_1800x490_aquaOriginal.jpg) no-repeat center center/cover;
+
+}
+
+.main_visual .bg02 {
+    background: url(../images/main03_1800x490_reatherCollection.jpeg) no-repeat center center/cover;
+}
+
+.main_visual .bg03 {
+    background: url(../images/main02_1800x490-HomeCollection.jpeg) no-repeat center center/cover;
+}
+
+.main_visual .main_cap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.main_visual .cap01 {
+    text-align: right;
+}
+
+.main_visual .cap03 {
+    text-align: right;
+}
+
+.main_visual h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.main_visual a {
+    border: 1px solid #111;
+    padding: 3px 20px;
+}
+
+.main_visual .main_arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.main_visual .main_arrow i {
+    color: #fff;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* <베스트셀러 제품> */
+.main_product {
+    padding: 100px 0;
+}
+
+.main_product h2 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 0 30px 0;
+    /* color: #ffe600ce; */
+}
+
+.main_product .product {
+    display: flex;
+    gap: 100px;
+    cursor: pointer;
+}
+
+.main_product .pro_cap {
+    text-align: center;
+    background: #fff;
+}
+
+.main_product strong {
+    display: block;
+    /* ->글자에 패딩이 안먹기때문에 display block(or inline-block) 줘야함 */
+    font-size: 17px;
+    font-weight: 700;
+    padding: 0 0 15px 0;
+}
+
+.main_product p {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0 0 15px 0;
+}
+
+.main_product .view {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.main_product .product_two {
+    padding: 20px 0;
+}
+
+
+.main_product a {
+    display: inline-block;
+    font-size: 15px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+}
+
+.main_product a:hover {
+    border: 1px solid #afa125;
+    color: #afa125;
+}
+
+/* ----커서 올렸을떄 노란 테두리 나오게---- */
+.main_product .pro {
+    position: relative;
+}
+
+.main_product .pro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0%;
+    height: 0%;
+    border-top: 1px solid #afa125;
+    border-left: 1px solid #afa125;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.main_product .pro:hover::before {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.main_product .pro::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 0%;
+    height: 0%;
+    border-bottom: 1px solid #afa125;
+    border-right: 1px solid #afa125;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.main_product .pro:hover::after {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+
+
+
+
+
+/* <푸터> */
+.footer {
+    border-top: 1px solid #afa125;
+    background: #fff;
+    color: #111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer .copy {
+    padding: 0 0 15px 0;
+}
+
+.footer .footer_customer {
+    margin: 0 0 10px 0;
+}
+
+.footer .footer_customer li {
+    display: inline-block;
+}
+
+.footer .footer_customer li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 11px;
+    background: #444;
+    margin: 0 10px;
+}
